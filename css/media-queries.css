@@ -18,20 +18,25 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: mediumpurple;
+    background-color: lightcyan;
     grid-area: main;
-    border: 1px solid grey;
+    border: 2px solid grey;
 }
 
-.hidden-on-desktop {
-    background-color: indianred;
-}
+/*.hidden-on-desktop {*/
+/*    !*background-color: indianred;*!*/
+/*}*/
 
 body h1 {
     background-color: chartreuse;
     grid-area: h1
 }
-
+h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: grey;
+}
 nav ul {
     list-style-type: none;
     display: flex;
@@ -42,9 +47,7 @@ nav ul li {
     background-color: brown;
 }
 
-h1 {
-    background-color: grey;
-}
+
 
 .header-img {
     background-color: orange;
