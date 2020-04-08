@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+    background-color: cornflowerblue;
+}
+
+body {
+    margin: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 3fr 1fr 1fr;
+    grid-template-areas:
+                "main main main main main"
+                " h1 h1 h1 h1 h1";
+}
+
+
+.alert-info {
+    background-color: mediumpurple;
+    grid-area: main;
+}
+
+.hidden-on-desktop {
+    background-color: indianred;
+}
+
+body h1 {
+    background-color: chartreuse;
+    grid-area: h1
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    background-color: lightpink;
+}
+nav ul li {
+    background-color: brown;
+}
+
+h1 {
+    background-color: grey;
+}
+
+.header-img {
+    background-color: orange;
+}
+
+
+/* Small devices (phones and pocket devices, 576 and up) */
+@media screen and (min-width:576px) { /* ... */ }
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width:992px) { /* ... */ }
+
+
