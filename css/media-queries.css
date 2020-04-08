@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    background-color: cornflowerblue;
+    /*background-color: cornflowerblue;*/
 }
 
 body {
@@ -8,7 +8,7 @@ body {
     min-width: 576px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: .2fr .5fr 1fr 1fr .5fr .3fr;
     grid-template-areas:
                 " .        main        main      main       .  "
                 " .        h1          h1        h1         .  "
@@ -23,9 +23,16 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-color: lightcyan;
     grid-area: main;
     border: 2px solid grey;
+    /*margin: auto;*/
+    font-size: 2em;
+}
+
+.alert-info a {
+    text-decoration: none;
 }
 
 /*.hidden-on-desktop {*/
@@ -34,39 +41,44 @@ body {
 
 body h1 {
     display: flex;
-    background-color: chartreuse;
-    grid-area: h1
-}
-h1 {
-    display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: grey;
+    justify-content: center;
+    /*background-color: chartreuse;*/
+    grid-area: h1;
+    font-size: 6em;
 }
 
 nav {
     grid-area: nav;
+    margin-bottom: -50em;
+}
 
+nav ul {
+    padding: 0;
 }
 
 .nav-links {
     list-style-type: none;
     display: flex;
-    flex-direction: row;
-    background-color: lightpink;
+    flex-direction: column;
 }
 
-/*nav ul li {*/
-/*    background-color: brown;*/
-/*}*/
-
-
+.nav-links li {
+    background-color: grey;
+    font-size: 1.5em;
+    padding: 1em;
+    text-align: center;
+    margin: 5px;
+}
 
 .header-img {
     display: flex;
     justify-content: center;
     align-items: center;
     grid-area: img;
+    width: 100%;
+    padding-top: 0;
 }
 
 .main {
