@@ -5,6 +5,7 @@
 
 body {
     margin: 15px;
+    width: 100%
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 3fr 1fr 1fr;
@@ -13,10 +14,13 @@ body {
                 " h1 h1 h1 h1 h1";
 }
 
-
 .alert-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: mediumpurple;
     grid-area: main;
+    border: 1px solid grey;
 }
 
 .hidden-on-desktop {
