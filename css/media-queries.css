@@ -95,14 +95,31 @@
         grid-area: footer;
         margin: 1em;
     }
+
+footer ul {
+    /*Added*/
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: flex-end;
+    margin-left: 100em;
+}
+
+footer li {
+    /*Added*/
+    /*margin-left: auto;*/
+    padding: 1em;
+    font-size: 2em;
+}
 /*}*/
 
-/* Large devices (desktops, 992px and up) */
-@media screen and (min-width:992px) {
+/* Large devices (desktops, 992px and up) */ /*A. Changed min-Width*/
+@media screen and (min-width:960px) {
 
 
     body {
         display: grid;
+        margin: 1em; /*Added*/
         grid-template-columns: 2fr 1fr;
         grid-template-rows: 1fr 2fr 1fr .5fr;
         grid-template-areas:
@@ -118,25 +135,33 @@
     }
 
     h1 {
+        display: flex; /*Added*/
+        flex-direction: row; /*Added*/
+        /*align-items: baseline; !*Added*!*/
         grid-area: h1;
-        margin-left: 1px;
-        margin-top: 5PX
-        font-size: 5em;
+        /*margin-left: 1px;*/
+        /*margin-top: 5PX;*/
+        margin-left: -3em; /*Added*/
+        font-size: 3em;
     }
 
     nav {
+        display: flex;  /*Added*/
         grid-area: nav;
         margin-left: auto;
     }
 
     .header-img {
+        /* Changed the Image*/
         grid-area: img;
+        min-width: 992px;
 
     }
 
     .nav-links {
         display: flex;
         flex-direction: row;
+        align-items: center; /*Added*/
         background-color: white;
 
     }
@@ -145,6 +170,7 @@
         list-style-type: none;
         background-color: white;
         padding: 10px;
+        font-size: .8em;
     }
 
     .main {
@@ -157,7 +183,50 @@
 
     footer {
         grid-area: footer;
+        display: flex;
+
     }
+
+    #social-media-links {
+        /*Added*/
+        display: flex;
+        flex-direction: row;
+    }
+
+    footer p {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 1.5em; /*Added*/
+        /*align-items: center;*/
+    }
+
+    footer ul {
+        /*Added*/
+        display: flex;
+        list-style: none;
+        justify-content: flex-end;
+        margin-left: 100em;
+    }
+
+    footer li {
+        /*Added*/
+        /*margin-left: auto;*/
+        padding: 1em;
+        font-size: 2em;
+    }
+
+}
+/*Added to help mediate the transition...something still seems off*/
+@media screen and (min-width: 500px) and (max-width: 959px) {
+    footer {
+        display: none;
+    }
+    main {
+        width: 90%;
+        margin: auto;
+    }
+
 }
 
 /*Bonus: Add Social Media Icons*/
